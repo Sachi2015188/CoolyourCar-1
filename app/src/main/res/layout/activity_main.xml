@@ -7,7 +7,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/blue2"
     tools:context="com.example.hp.myapplicationgw.MainActivity">
+
+    <ListView
+        android:id="@+id/dateView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:stackFromBottom="true"
+        android:divider="@android:color/transparent"
+        android:transcriptMode="alwaysScroll"
+        tools:listitem="@layout/data"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,57 +30,56 @@
         android:id="@+id/textView"
         android:textSize="30dp"
         android:padding="30dp"
+        android:layout_marginTop="20dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="132dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Updatable temparature"
-        android:id="@+id/textView2"
-        android:textSize="30dp"
-        android:padding="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <LinearLayout
+        android:layout_centerHorizontal="true" />
+
+    <!--<LinearLayout
         android:layout_above="@id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:layout_alignTop="@+id/textView">
+        android:layout_alignTop="@+id/textView"
+        android:id="@+id/linearLayout">
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
+            android:layout_height="wrap_content"/>
+    </LinearLayout>-->
 
-    </LinearLayout>
-    <LinearLayout
+   <!-- <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
-        android:layout_weight="0.48" >
+        android:layout_weight="0.48"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/on"
-            android:layout_width="wrap_content"
-            android:layout_height="118dp"
-            android:layout_weight="0.02"
-            android:text="ON" />
+    </LinearLayout>-->
 
-        <Button
-            android:id="@+id/off"
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:layout_weight="0.02"
-            android:text="OFF" />
+    <Button
+        android:id="@+id/on"
+        android:layout_width="wrap_content"
+        android:layout_height="118dp"
+        android:layout_weight="0.02"
+        android:text="ON"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="36dp" />
 
-    </LinearLayout>
-
+    <Button
+        android:id="@+id/off"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_weight="0.02"
+        android:text="OFF"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_alignTop="@+id/on"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
 
